@@ -1,7 +1,9 @@
-#include "header.h"
+#include "main.h"
 /**
- *
- *
+ * _printf - a function that functions like printf
+ * @format: the value to print
+ * @...: other parameters
+ * Return: the characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -24,6 +26,7 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 's')
 		{
 			int strval = _strcat(va_arg(lst, char*));
+
 			i++;
 			j += (strval - 1);
 		}

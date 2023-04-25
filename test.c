@@ -1,6 +1,8 @@
-#include "header.h"
+#include "main.h"
 /**
- *
+ * _strcat - a function that helps print a string
+ * @str: the string to be printed
+ * Return: the number of printed characters
  */
 int _strcat(char *str)
 {

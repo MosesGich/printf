@@ -1,7 +1,8 @@
-#include "header.h"
+#include "main.h"
 /**
- *
- *
+ * _putchar - a function that prints a single character
+ * @a: the character to be printed
+ * Return: the character
  */
 int _putchar(char a)
 {
