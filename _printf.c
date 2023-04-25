@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 {
 	va_list lst;
 	unsigned int i, j = 0;
-	int *f;
 
 	va_start(lst, format);
 	for (i = 0; format[i] != '\0'; i++)
