@@ -1,22 +1,18 @@
 #include "main.h"
 /**
- * _printf - a function that functions like printf
- * @format: the value to print
- * @...: other parameters
- * Return: the characters printed
+ *
+ *
  */
-int _printf(const char *format, ...)
+void compare(const char *format, ...)
 {
 	va_list lst;
 	unsigned int i, j = 0;
 
 	va_start(lst, format);
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '%'; i++)
 	{
 		if (format[i] != '%')
-		{
 			_putchar(format[i]);
-		}
 		else if (format[i + 1] == 'c')
 		{
 			_putchar(va_arg(lst, int));
@@ -39,4 +35,3 @@ int _printf(const char *format, ...)
 	va_end(lst);
 	return (j);
 }
-
