@@ -8,15 +8,9 @@
 int _printf(const char *format, ...)
 {
 	va_list lst;
-	unsigned int i, a, j = 0;
+	unsigned int i, j = 0;
 
 	va_start(lst, format);
-	if (va_arg(lst, int))
-	{
-		a = check_arg(format);
-		if (a != 1)
-			return (0);
-	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
