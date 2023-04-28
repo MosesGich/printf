@@ -6,22 +6,25 @@
  */
 int bin(unsigned int a)
 {
-	char *bin;
-	int j, i = 0, b = 0;
+	int i, d = 0;
 
-	bin = malloc(sizeof(a));
-	while (a > 0)
+	if (a == 0)
 	{
-		bin[i] = a % 2 + '0';
-		a /= 2;
-		i++;
+		_putchar('0');
+		return (1);
 	}
-	j = i - 1;
-	for (; j >= 0; j--)
+	for (i = 31; i >= 0; i--)
 	{
-		_putchar(bin[j]);
-		b++;
+		if ((a >> i) & 1)
+		{
+			_putchar('1');
+			d++;
+		}
+		else if (d > 0 || i == 0)
+		{
+			_putchar('0');
+			d++;
+		}
 	}
-	free(bin);
-	return (b);
+	return (d);
 }
