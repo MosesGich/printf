@@ -8,8 +8,7 @@ int number(int a)
 {
 	char s2;
 	char *s;
-	int j, f, i = 0;
-	int ge = 0;
+	int j, f, i = 0, ge = 0;
 
 	if (a == INT_MIN)
 	{

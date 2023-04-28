@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- *
- *
+ * bin - a function that prints in binary
+ * @a: the integer to be printed
+ * Return: the integers printed
  */
 int bin(unsigned int a)
 {
