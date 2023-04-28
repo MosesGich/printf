@@ -10,13 +10,21 @@ int number(int a)
 	char *s;
 	int j, i = 0;
 
+	if (a == INT_MIN)
+	{
+		s = "-2147483648";
+		for (i = 0; s[i] != '\0';  i++)
+		{
+			_putchar(s[i]);
+		}
+		return (i);
+	}
 	if (a < 0)
 	{
 		_putchar('-');
 		a = -a;
 	}
 	s = malloc(sizeof(a));
-
 	do {
 		s[i++] = a % 10 + '0';
 		a /= 10;
@@ -35,5 +43,6 @@ int number(int a)
 		_putchar(s[j++]);
 		i++;
 	}
+	free(s);
 	return (i);
 }
