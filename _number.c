@@ -8,9 +8,18 @@ int number(int a)
 {
 	char s2;
 	char *s;
-	int j, i = 0;
+	int j, f, i = 0;
 	int ge = 0;
 
+	if (a == INT_MIN)
+	{
+		s = "-2147483648";
+		for (f = 0; s[f] != '\0'; f++)
+		{
+			_putchar(s[f]);
+		}
+		return (f);
+	}
 	if (a < 0)
 	{
 		_putchar('-');
