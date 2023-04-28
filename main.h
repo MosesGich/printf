@@ -4,6 +4,7 @@ int _putchar(char);
 int _printf(const char *format, ...);
 int _strcat(char *);
 int compare(const char *, ...);
+int number(int a);
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
