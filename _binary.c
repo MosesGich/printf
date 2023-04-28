@@ -19,4 +19,5 @@ int bin(unsigned int a)
 	for (; j >= 0; j--)
 		_putchar(bin[j]);
 	free(bin);
+	return (0);
 }
