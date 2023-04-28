@@ -8,9 +8,8 @@ int number(int a)
 {
 	char s2;
 	char *s;
-	int j, i = 0;
+	int i, j;
 
-	}
 	if (a < 0)
 	{
 		_putchar('-');
