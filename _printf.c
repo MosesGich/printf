@@ -10,7 +10,7 @@ int print_char(char);
 int _printf(const char *format, ...)
 {
 	va_list lst;
-	unsigned int i, ge, j = 0;
+	unsigned int i, j = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -33,9 +33,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
-			ge = number(va_arg(lst, int));
+			j += number(va_arg(lst, int)) - 1;
 			i++;
-			j += (ge - 1);
 		}
 		else
 			return (0);
