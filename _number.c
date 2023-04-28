@@ -8,7 +8,7 @@ int number(int a)
 {
 	char s2;
 	char *s;
-	int i, j;
+	int j, i = 0;
 
 	if (a < 0)
 	{
