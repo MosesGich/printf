@@ -31,8 +31,6 @@ int compare(const char *format, ...)
 			_putchar('%');
 			i++;
 		}
-		else if (format[i] == '%')
-			return (0);
 		j = j + 1;
 	}
 	va_end(lst);
