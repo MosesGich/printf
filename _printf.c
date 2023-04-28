@@ -10,7 +10,7 @@ int print_char(char);
 int _printf(const char *format, ...)
 {
 	va_list lst;
-	unsigned int i, strval, ge, j = 0;
+	unsigned int i, ge, j = 0;
 
 	if (format == NULL)
 		return (-1);
