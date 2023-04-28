@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+int print_char(char);
 /**
  * _printf - a function that functions like printf
  * @format: the value to print
@@ -19,10 +20,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 			_putchar(format[i]);
 		else if (format[i + 1] == 'c')
-		{
-			_putchar(va_arg(lst, int));
-			i++;
-		}
+			i += print_char(va_arg(lst, int));
 		else if (format[i + 1] == 's')
 		{
 			strval = _strcat(va_arg(lst, char*));
@@ -47,4 +45,13 @@ int _printf(const char *format, ...)
 	va_end(lst);
 	return (j);
 }
-
+/**
+ * print_char - a function that prints a character
+ * @c: the character to be printed
+ * Return: the number of printed characters
+ */
+int print_char(char c)
+{
+	_putchar(c);
+	return (1);
+}
