@@ -36,6 +36,8 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			i++;
 		}
+		else
+			return (0);
 		j += 1;
 	}
 	va_end(lst);
