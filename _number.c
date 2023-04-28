@@ -34,6 +34,5 @@ int number(int a)
 		_putchar(s[j++]);
 		i++;
 	}
-	free(s);
 	return (i);
 }
