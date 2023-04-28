@@ -9,11 +9,13 @@ int number(int a)
 	char s2;
 	char *s;
 	int j, i = 0;
+	int ge = 0;
 
 	if (a < 0)
 	{
 		_putchar('-');
 		a = -a;
+		ge++;
 	}
 	s = malloc(sizeof(a));
 	do {
@@ -32,7 +34,7 @@ int number(int a)
 	while (s[j] != '\0')
 	{
 		_putchar(s[j++]);
-		i++;
+		ge++;
 	}
-	return (i);
+	return (ge);
 }
