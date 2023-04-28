@@ -23,9 +23,8 @@ int _printf(const char *format, ...)
 			i += print_char(va_arg(lst, int));
 		else if (format[i + 1] == 's')
 		{
-			strval = _strcat(va_arg(lst, char*));
+			j += _strcat(va_arg(lst, char*)) - 1;
 			i++;
-			j += (strval - 1);
 		}
 		else if (format[i + 1] == '%')
 		{
