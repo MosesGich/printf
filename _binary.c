@@ -7,7 +7,7 @@
 int bin(unsigned int a)
 {
 	char *bin;
-	int j, i = 0;
+	int j, i = 0, b = 0;
 
 	bin = malloc(sizeof(a));
 	while (a > 0)
@@ -18,7 +18,10 @@ int bin(unsigned int a)
 	}
 	j = i - 1;
 	for (; j >= 0; j--)
+	{
 		_putchar(bin[j]);
+		b++;
+	}
 	free(bin);
-	return (0);
+	return (b);
 }

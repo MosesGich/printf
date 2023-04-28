@@ -5,6 +5,7 @@ int _printf(const char *format, ...);
 int _strcat(char *);
 int compare(const char *, ...);
 int number(int a);
+int bin(unsigned int);
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
