@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list lst;
-	unsigned int i, j = 0;
+	unsigned int i, strval, ge, j = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -25,9 +25,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 's')
 		{
-			int strval = _strcat(va_arg(lst, char*));
-
-
+			strval = _strcat(va_arg(lst, char*));
 			i++;
 			j += (strval - 1);
 		}
@@ -35,6 +33,12 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 			i++;
+		}
+		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
+		{
+			ge = number(va_arg(lst, int));
+			i++;
+			j += (ge - 1);
 		}
 		else
 			return (0);
