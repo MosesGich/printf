@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 'b')
 		{
-			j += bin(va_arg(lst, unsigned int));
+			j += bin(va_arg(lst, unsigned int)) - 1;
 			i++;
 		}
 		else
