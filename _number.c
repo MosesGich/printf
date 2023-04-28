@@ -45,5 +45,6 @@ int number(int a)
 		_putchar(s[j++]);
 		ge++;
 	}
+	free(s);
 	return (ge);
 }
